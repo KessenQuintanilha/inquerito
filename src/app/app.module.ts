@@ -14,6 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { HttpClientModule } from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
 
   ],
   providers: [],
