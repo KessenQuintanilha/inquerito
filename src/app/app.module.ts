@@ -12,6 +12,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     MatRadioModule,
     MatInputModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    NgbModule
 
   ],
   providers: [],
