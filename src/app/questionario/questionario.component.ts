@@ -14,6 +14,9 @@ export class QuestionarioComponent implements OnInit {
   texto4 = '';
   texto5 = '';
   
+  confirmacao(){
+    alert('Enviado com Sucesso!!')
+  }
   
   constructor(){
     console.log('Componente construtor')
