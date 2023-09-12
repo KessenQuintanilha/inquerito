@@ -1,0 +1,9 @@
+{
+    "/Inquerito/*": {
+      "target": "http://localhost:5098/Inquerito",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": false,
+      "pathRewrite": { "^/Inquerito": "" }
+    }
+  }

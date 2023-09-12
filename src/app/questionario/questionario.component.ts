@@ -53,17 +53,21 @@ export class QuestionarioComponent implements OnInit {
     this.ID_Chamado = Number(params.get('id_chamado'));
     this.ID_Cliente = Number(params.get('id_cliente'));
     this.User_responsavel = Number(params.get('user_responsavel'));
-
+/* Utilizado para debug
     console.log (this.ID_Chamado);
     console.log(this.ID_Cliente);
     console.log(this.User_responsavel);
+    */
 })
 
 }
 
 enviarQuestionario() {
   if (this.formInquerito.valid) {
-    const data = {
+    const respostasFormulario = {
+      iD_Chamado: this.ID_Chamado,
+      iD_Cliente: this.ID_Cliente,
+      user_responsavel : this.User_responsavel,
       Tempo_Resposta: this.formInquerito.get('tempo_resposta')?.value,
       Qualidade_Intervencao: this.formInquerito.get('qualidade_intervencao')?.value,
       Recomendacao: this.formInquerito.get('recomendacao')?.value,
@@ -71,11 +75,14 @@ enviarQuestionario() {
     };
 
     // Substitua 'URL_DA_API' pela URL da sua API externa
-    this.questionarioService.enviarQuestionario('URL_DA_API', data).subscribe(
+
+
+
+    this.questionarioService.enviarQuestionario(respostasFormulario).subscribe(
       (response) => {
         // Trate a resposta da API conforme necessário
         console.log('Resposta da API:', response);
-        alert('Resposta Enviada com Sucesso!!');
+        alert(response);
       },
       (error) => {
         console.error('Erro ao enviar resposta:', error);
@@ -96,13 +103,11 @@ ChamarFuncao(){
     // Se ID_Chamado existe, faça a verificação
     this.questionarioService.checkIfIDChamadoExists(ID_Chamado).subscribe((response: boolean) => {
       if (response) {
-        alert('Questionário já respondido.');
+        alert('O feedback relativamente a este PAT já se encontra registado.');
       } else {
         this.enviarQuestionario();
       }
     });
-  } else {
-    alert('Chamado Inexistente.');
-}
+  } 
 }
 }
