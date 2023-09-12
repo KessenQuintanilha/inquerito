@@ -41,10 +41,10 @@ export class QuestionarioComponent implements OnInit {
 
   ngOnInit() {
     this.formInquerito = this.fb.group({
-    primeiraPergunta: [null, Validators.required],// trocar por variaveis da bd
-    segundaPergunta: [null, Validators.required], // trocar por variaveis da bd
-    terceiraPergunta: [null, Validators.required], // trocar por variaveis da bd
-    observacoes: null
+    Tempo_Resposta: [null, Validators.required],// trocar por variaveis da bd
+    Qualidade_Intervencao: [null, Validators.required], // trocar por variaveis da bd
+    Recomendacao: [null, Validators.required], // trocar por variaveis da bd
+    Observacoes: null
   })
 
 
@@ -64,10 +64,10 @@ export class QuestionarioComponent implements OnInit {
 enviarQuestionario() {
   if (this.formInquerito.valid) {
     const data = {
-      primeiraPergunta: this.formInquerito.get('primeiraPergunta')?.value,
-      segundaPergunta: this.formInquerito.get('segundaPergunta')?.value,
-      terceiraPergunta: this.formInquerito.get('terceiraPergunta')?.value,
-      observacoes: this.formInquerito.get('observacoes')?.value,
+      Tempo_Resposta: this.formInquerito.get('tempo_resposta')?.value,
+      Qualidade_Intervencao: this.formInquerito.get('qualidade_intervencao')?.value,
+      Recomendacao: this.formInquerito.get('recomendacao')?.value,
+      Observacoes: this.formInquerito.get('observacoes')?.value,
     };
 
     // Substitua 'URL_DA_API' pela URL da sua API externa

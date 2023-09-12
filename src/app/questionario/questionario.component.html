@@ -8,17 +8,17 @@
     <form [formGroup]="formInquerito">
   
       <h2 class="estiloTexto3">{{ texto3 }}</h2>
-      <mat-radio-group class="lado" color="primary" aria-label="Select an option" formControlName="primeiraPergunta">
+      <mat-radio-group class="lado" color="primary" aria-label="Select an option" formControlName="tempo_resposta">
         <mat-radio-button *ngFor="let i of opcoes" [value]="i">{{ i }}</mat-radio-button>
       </mat-radio-group>
   
       <h2 class="estiloTexto4">{{ texto4 }}</h2>
-      <mat-radio-group class="lado" color="primary" aria-label="Select an option" formControlName="segundaPergunta">
+      <mat-radio-group class="lado" color="primary" aria-label="Select an option" formControlName="qualidade_intervencao">
         <mat-radio-button *ngFor="let i of opcoes" [value]="i">{{ i }}</mat-radio-button>
       </mat-radio-group>
   
       <h2 class="estiloTexto5">{{ texto5 }}</h2>
-      <mat-radio-group class="lado" color="primary" aria-label="Select an option" formControlName="terceiraPergunta">
+      <mat-radio-group class="lado" color="primary" aria-label="Select an option" formControlName="recomendacao">
         <mat-radio-button *ngFor="let i of opcoes" [value]="i">{{ i }}</mat-radio-button>
       </mat-radio-group>
   
