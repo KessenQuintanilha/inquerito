@@ -41,10 +41,10 @@ export class QuestionarioComponent implements OnInit {
 
   ngOnInit() {
     this.formInquerito = this.fb.group({
-    Tempo_Resposta: [null, Validators.required],// trocar por variaveis da bd
-    Qualidade_Intervencao: [null, Validators.required], // trocar por variaveis da bd
-    Recomendacao: [null, Validators.required], // trocar por variaveis da bd
-    Observacoes: null
+    tempo_resposta: [null, Validators.required],// trocar por variaveis da bd
+    qualidade_intervencao: [null, Validators.required], // trocar por variaveis da bd
+    recomendacao: [null, Validators.required], // trocar por variaveis da bd
+    observacoes: null
   })
 
 

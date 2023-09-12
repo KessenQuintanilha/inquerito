@@ -38,7 +38,7 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
     HttpClientModule
   ],
   providers: [QuestionarioService],
-  bootstrap: [AppComponent,QuestionarioComponent]
+  bootstrap: [AppComponent]
 })
 
  export class AppModule { }
