@@ -2,22 +2,22 @@
 
 <div class="">
 
-    <h1 class="estiloTexto1">{{ texto1 }}</h1>
-    <h2 class="estiloTexto2">{{ texto2 }}</h2>
+    <h1 class="estiloTexto1">{{ texto_principal }}</h1>
+    <h2 class="estiloTexto2">{{ instrucao }}</h2>
   
     <form [formGroup]="formInquerito">
   
-      <h2 class="estiloTexto3">{{ texto3 }}</h2>
+      <h2 class="estiloTexto3">{{ tempo_intervencao }}</h2>
       <mat-radio-group class="lado" color="primary" aria-label="Select an option" formControlName="tempo_resposta">
         <mat-radio-button *ngFor="let i of opcoes" [value]="i">{{ i }}</mat-radio-button>
       </mat-radio-group>
   
-      <h2 class="estiloTexto4">{{ texto4 }}</h2>
+      <h2 class="estiloTexto4">{{ qualidade_atendimento }}</h2>
       <mat-radio-group class="lado" color="primary" aria-label="Select an option" formControlName="qualidade_intervencao">
         <mat-radio-button *ngFor="let i of opcoes" [value]="i">{{ i }}</mat-radio-button>
       </mat-radio-group>
   
-      <h2 class="estiloTexto5">{{ texto5 }}</h2>
+      <h2 class="estiloTexto5">{{ recomendacao_trabalho }}</h2>
       <mat-radio-group class="lado" color="primary" aria-label="Select an option" formControlName="recomendacao">
         <mat-radio-button *ngFor="let i of opcoes" [value]="i">{{ i }}</mat-radio-button>
       </mat-radio-group>
@@ -30,7 +30,7 @@
       </div>
   
   
-      <button mat-raised-button [disabled]="formInquerito.invalid"(click)="ChamarFuncao()"class="botao-habilitado" 
+      <button mat-raised-button [disabled]="formInquerito.invalid"(click)="Finalizar()"class="botao-habilitado" 
     [ngClass]="{'botao-desabilitado': formInquerito.invalid}"> Enviar </button>
  
     </form>

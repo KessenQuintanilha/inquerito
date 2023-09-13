@@ -21,8 +21,7 @@ export class QuestionarioService {
     this.ID_Chamado = ID_Chamado;
     this.ID_Cliente = ID_Cliente;
     this.User_responsavel = User_responsavel;
-  }
-  
+  }  
 
   getValues() {
     return {
@@ -32,6 +31,7 @@ export class QuestionarioService {
     };
   }
   */
+ 
   checkIfIDChamadoExists(ID_Chamado: number): Observable<boolean> {
     return this.http.get<boolean>(`${this.apiUrl}/getpat?id_chamado=${ID_Chamado}`);
   }
