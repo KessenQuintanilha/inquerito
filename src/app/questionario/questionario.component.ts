@@ -97,7 +97,12 @@ Finalizar(){
       } else {
         this.enviarQuestionario();
       }
-    });
+    },
+    (error) => {
+      console.error('Erro ao se comunicar com o servidor:', error);
+      alert('Ocorreu um erro ao tentar enviar os dados. Por favor, reporte este erro para o e-mail: phc@pt.a2it.com');
+    }
+    );
   } 
 }
 }
